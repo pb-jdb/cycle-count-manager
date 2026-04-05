@@ -1,0 +1,42 @@
+# Netlify Configuration for Cycle Count Manager
+# This file tells Netlify how to deploy your site
+
+[build]
+  # No build command needed - it's a static site
+  command = ""
+  # Publish the entire directory
+  publish = "."
+
+# Development server settings
+[dev]
+  command = "python -m http.server 8000"
+  port = 8000
+  targetPort = 8000
+  autoLaunch = true
+
+# Try files in order - if a file doesn't exist, try the next one
+[[redirects]]
+  from = "/*"
+  to = "/cycle-count-app.html"
+  status = 200
+
+# Cache settings
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Cache static files for 1 hour
+    Cache-Control = "public, max-age=3600"
+
+# Don't cache HTML (so updates are fresh)
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
