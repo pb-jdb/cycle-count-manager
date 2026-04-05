@@ -1,0 +1,45 @@
+{
+  "name": "cycle-count-manager",
+  "version": "1.0.0",
+  "description": "A comprehensive inventory cycle counting application that automatically classifies SKUs and generates daily count sheets based on inventory turnover rates",
+  "main": "index.js",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "dev": "python -m http.server 8080"
+  },
+  "keywords": [
+    "inventory",
+    "cycle-count",
+    "warehouse",
+    "SKU",
+    "inventory-management",
+    "count-sheets",
+    "Excel",
+    "ABC-analysis"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/cycle-count-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/cycle-count-manager/issues"
+  },
+  "homepage": "https://github.com/yourusername/cycle-count-manager#readme",
+  "files": [
+    "cycle-count-app.html",
+    "cycle-count-app.jsx",
+    "inventory_template.xlsx",
+    "README.md",
+    "TECHNICAL.md",
+    ".gitignore",
+    "LICENSE"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
